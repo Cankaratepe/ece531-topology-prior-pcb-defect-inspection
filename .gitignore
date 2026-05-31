@@ -1,0 +1,6 @@
+*.mat
+Predictions_*/
+Paper_Figures/
+generated_blank_masks/
+*.asv
+.DS_Store
