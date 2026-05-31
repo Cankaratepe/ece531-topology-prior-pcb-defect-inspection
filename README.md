@@ -55,3 +55,49 @@ project_root/
     ├── train/
     ├── test/
     └── ground_truth/
+```
+The dataset is not included in this repository.
+
+## Synthetic Images
+
+Synthetic images were used only for Stage 1 classification augmentation because pixel-level masks were not available.
+
+Expected optional folder structure:
+
+```text
+transistor/
+└── synthetic/
+    └── classification_train/
+        ├── bent_lead/
+        ├── cut_lead/
+        ├── damaged_case/
+        └── misplaced/
+```
+
+# How to Run
+1. Open MATLAB.
+2. Set the project folder as the current working directory.
+3. Make sure the transistor/ dataset folder is present.
+4. Run:
+```text
+main_train_all
+main_evaluate_all
+generate_defect_type_figures_selected
+generate_clean_heatmap_figure
+```
+
+# Hardware
+
+Experiments were run in MATLAB using an NVIDIA Quadro P2000 GPU.
+
+Approximate training times:
+| Model                    |        Time |
+| ------------------------ | ----------: |
+| Stage 1 ResNet-18        |  1 min 45 s |
+| RGB U-Net                | 13 min 30 s |
+| Fixed-Prior U-Net        | 14 min 14 s |
+| Learnable Topology U-Net | 13 min 45 s |
+
+# Notes
+
+This repository is provided for academic use as part of the ECE531 Computer Vision final term project.
