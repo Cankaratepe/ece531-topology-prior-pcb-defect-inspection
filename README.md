@@ -14,7 +14,7 @@ The pipeline has two stages:
 1. **Stage 1: Image-Level Go/No-Go Detection**
    - ResNet-18 binary classifier
    - Classes: Healthy and Faulty
-   - 33 synthetic defect images were used only for image-level classifier augmentation
+   - 22 synthetic defect images were used only for image-level classifier augmentation
 
 2. **Stage 2: Pixel-Level Defect Segmentation**
    - RGB U-Net baseline
